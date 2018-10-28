@@ -1,0 +1,1 @@
+This is a basic JavaScript program that will play rock paper scissors with the computer. 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "UTF-8" />
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+<script>
+let cpuScore = 0;
+let playerScore = 0;
+alert('Please use the developer console to play this game after clicking ok. Once you are in the console, type game() to start')
+
+// PROMPTS PLAYER TO MAKE A DECISION
+function playerDecision() {
+    playerSelect = prompt('SELECT ROCK, PAPER OR SCISSORS');
+    playerSelect = playerSelect.toLowerCase();
+    return playerSelect;
+}
+// COMPUTER CHOOSES RANDOM CHOICE
+   function computerPlay() {
+      let random = Math.floor(Math.random()*3);
+      let choice1 = "rock";
+      let choice2 = "paper";
+      let choice3 = "scissors";
+    
+      if (random == 0) {
+        return choice1;
+      }else if (random == 1){
+        return choice2;
+      }else if (random == 2){
+        return choice3;
+      }
+   }
+// PLAYS A SINGLE ROUND OF THE GAME
+function playRound(playerSelection,computerSelection) {
+     
+      switch (true){
+        case playerSelection == computerSelection :
+            console.log('Game is a Tie!'); // Game is a tie
+            break;
+        case playerSelection == "rock" && computerSelection == "paper" :
+            cpuScore++;
+            console.log('You lose, computer chooses paper and that beats rock!' + " SCORE " + "You: " + playerScore + "  CPU: " + cpuScore) // CPU Win- Paper beats Rock
+            break;
+        case playerSelection == "paper" && computerSelection == "scissors" :
+            cpuScore++;
+            console.log('You lose, computer chooses scissors and that beats paper!' + " SCORE " + "You: " + playerScore + "  CPU: " + cpuScore) // CPU Win - Scissors beats Paper
+            break;
+        case playerSelection == "scissors" && computerSelection == "rock" : 
+            cpuScore++;
+            console.log('You lose, computer chooses rock and that beats scissors!' + " SCORE " + "You: " + playerScore + "  CPU: " + cpuScore) // CPU Win - Rock beats Scissors
+            break; 
+        case playerSelection == "paper" && computerSelection == "rock" :
+            playerScore++;
+            console.log('You win, paper beats rock!' + " SCORE " + "You: " + playerScore + "  CPU: " + cpuScore) // Player Win - Paper beats Rock
+            break;
+        case playerSelection == "rock" && computerSelection == "scissors" :
+            playerScore++;
+            console.log('You win, rock beats scissors!'+ " SCORE " + "You: " + playerScore + "  CPU: " + cpuScore)  // Player Win - Rock beats Scissors
+            break;
+        case playerSelection == "scissors" && computerSelection == "paper" :
+            playerScore++;
+            console.log('You win, scissors beat paper!' + " SCORE " + "You: " + playerScore + "  CPU: " + cpuScore)  // Player Win - Scissors beats Paper
+            break;
+        default :
+           console.log('Must choose rock paper or scissor...')
+           break;           
+      }
+   }
+// GAME OVER ALERT 
+function gameOver(){
+  if (playerScore == 3){
+    alert("Game Over! YOU WIN!!!  SCORE: You: " + playerScore + "  Computer: " + cpuScore + "     Press F5 to play again...");
+  }else if(cpuScore == 3){
+    alert("Game Over! You lost... SCORE: You: " + playerScore + "  Computer: " + cpuScore + "     Press F5 to play again...");
+  }
+}
+// PLAYS A BEST OF 5 GAME, KEEPS SCORE AND REPORTS WINNER AT THE END
+function game (){
+    let playerSelection = playerDecision();
+    let computerSelection = computerPlay();
+
+    if (playerScore === 3 || cpuScore === 3){
+       gameOver();
+    }else if (playerScore < 3 || cpuScore < 3 ){
+      (playRound(playerSelection, computerSelection));
+      game();
+    }else {
+      game();
+    }
+}
+
+
+
+</script>
+</body>
+</html>
