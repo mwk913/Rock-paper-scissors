@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height:100%;
+    width:100%;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgb(253, 250, 250), rgba(15, 15, 15, 0.747));
+}
+#game_area {
+    background-color: rgba(15, 15, 15, .3);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+
+}
+#scoreboard{
+    background-color: rgba(15, 15, 15, .8);
+    width: 50%;
+    height: 200px;
+    margin: 0 auto;
+    border: 4px solid white;;
+    margin-top: 55px;
+}
+
+#roundResultText{
+    background-color: rgba(15, 15, 15, .6);
+    color: white;
+    padding: 3px;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+h1 {
+    margin-right: 45px;
+    margin-left: 10px;
+}
+.heading {
+    display: inline-block;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-top: 55px;
+}
+
+
+p {
+    margin-top: 75px;
+    font-weight: bold;
+
+}
+.main_content {
+    text-align: center;
+    position: relative;
+    top: 150px;
+}
+
+
+button{
+    margin: 25px;
+}
+
+.button1:hover {
+    background-color: rgb(53, 50, 47);
+    color:white;
+    text-transform: bold;
+    border: 2px solid white;
+}
+
+.button2:hover {
+    background-color:  rgb(53, 50, 47);
+    color:white;
+    text-transform: bold;
+    border: 2px solid white;;
+}
+
+.button3:hover {
+    background-color:  rgb(53, 50, 47);
+    color:white;
+    text-transform: bold;
+    border: 2px solid white;
+}
+
+.button1{
+    padding: 15px;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    box-shadow: 4px #494e00;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+
+.button2 {
+    padding: 15px;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    box-shadow: 4px #494e00;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.button3 {
+    padding: 15px;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    box-shadow: 4px #494e00;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#roundResultText {
+    font-size: 2em;
+    font-family: 'Orbitron', sans-serif;
+}
